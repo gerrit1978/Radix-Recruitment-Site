@@ -1,0 +1,5 @@
+name        = Call to Action button
+description = Uitschuivend blok met call to action blok
+core        = 7.x
+version     = 7.x-1.0
+package     = Radix

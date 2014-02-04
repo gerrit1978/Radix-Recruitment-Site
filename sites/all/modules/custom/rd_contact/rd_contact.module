@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * This module adds a call to action block
+ *
+ */
+
+/**
+ * Implements hook_init
+ */
+function rd_contact_init() {
+  $path = drupal_get_path('module', 'rd_contact');
+  drupal_add_js($path . '/js/script.js');
+}
+
+
+/**
+ * Implements hook_block_info
+ */
+function rd_contact_block_info() {
+  $blocks = array();
+  
+  $blocks['call_to_action'] = array(
+    'info' => 'Call to action',
+  );
+  
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function rd_contact_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'call_to_action':
+      $block['subject'] = '';
+      $block['content'] = _rd_contact_block_call_to_action_render();
+      break;
+  }
+  
+  return $block;
+}
+
+
+/**
+ * Render function
+ */
+function _rd_contact_block_call_to_action_render() {
+
+/*
+  $nid = 29;
+  $node = node_load($nid);
+  $node_view = node_view($node, 'full');
+  $output = drupal_render($node_view);
+*/
+
+	$block = module_invoke('webform', 'block_view', 'client-block-29');
+	$output = "<div class='form'>" . render($block['content']) . "</div>";
+	$output .= "<div class='handle'>Contact</div>";
+
+  return $output;
+}

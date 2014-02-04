@@ -1,0 +1,317 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+  $zen-column-count: 12;
+  $zen-grid-width: 720px;
+  $zen-gutter-width: 10px;
+
+	.tablet {
+	  display: block;
+	  margin-bottom: 20px;
+	  a {
+	    display: block;
+	    width: 100%;
+	    background: $mainColor;
+	    color: white;
+	    font-weight: 800;
+	    text-align: center;
+	    padding: 10px 0;
+	  }
+	}
+
+
+  #call-to-action-wrapper {
+    display: none;
+  }
+
+  .region-highlighted {
+    .visual {
+      height: 200px;
+    }
+    .block-front-items {
+      ul.front-items {
+        .wrapper {
+          height: 180px !important;
+          background: none !important;
+          .caption {
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            font-size: 2em !important;
+            text-align: center;
+            margin-top: 0 !important;
+            em {
+              font-weight: 100;
+            }
+          }
+          .extra-visual {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+	
+	#navigation {
+	  .block-menu {
+	    ul {
+	      li {
+	        font-size: 0.875em;
+	        margin-right: 15px;
+	        &.last {
+	          margin-right: 0;
+	        }
+	      }
+	    }
+	  }
+	}
+
+  #main {
+    .block-tagline-front {
+      text-align: left; 
+      font-size: 1em;
+      margin-bottom: 40px;
+    }
+  }
+
+  #main {
+    .block-960 {
+	    margin-top: 20px;
+	    h1 {
+	      font-size: 3em;
+	      border: none;
+	      margin-bottom: 40px;
+	    }
+    }
+  }
+  
+  #main {
+    .block-wat-doen-we {
+      margin-bottom: 80px;
+      ul.blocks {
+        li {
+          width: 49% !important;
+          height: 170px;
+          margin-right: 2% !important;
+          position: relative;
+          &.even {
+            margin-right: 0 !important;
+          }
+          a {
+	          .title {
+	            font-size: 2em;
+	          }
+          }
+        }
+      }
+    }
+  }
+
+	#main {
+	  .block-ons-werk {
+	    margin-bottom: 80px;
+	  }
+	}
+  
+  #main {
+    .header-block {
+      margin-top: 0;
+      height: auto;
+      .visual {
+        height: 200px;
+      }
+      .text {
+        margin-top: 60px;      
+        .captions {
+          h1 {
+            margin: 0;
+            color: $lightColor4;
+          }
+          h2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+
+	#main {
+	  .field-name-field-page-block {
+	    h1 {
+	      font-size: 2em;
+	      border: none !important;
+	      margin-bottom: 45px;
+	      margin-top: 30px;
+	    }
+	    .highlight {
+	      margin: 0;
+	      margin-top: 20px;
+	      padding: 10px;
+	    }
+	    .non-highlight {
+	      margin: 0;
+	      margin-top: 20px;
+	      padding: 0;
+	    }
+	    .field-name-field-page-block-body {
+	      font-size: 0.9375em;
+	      img {
+	        max-width: 50% !important;
+	        margin-left: 2%;
+	        float: right;
+	        height: auto !important;
+	      }
+	      h4 {
+	        margin-bottom: 5px;
+	      }
+	      ul {
+	        margin: 10px 0 !important;
+	      }
+	      p {
+	        margin-bottom: 20px;
+	        text-align: left !important;
+	        &.more-info {
+	          display: none;
+	        }
+	      }
+	      ul {
+	        margin: 20px 0;
+	      }
+		    .block-col6 {
+		      width: 100%;
+		      float: none;
+		      margin-right: 0;
+		      margin-bottom: 20px;
+		      padding: 0;
+		      
+		    }
+		    .centered {
+		      font-size: 0.9375em;
+	        height: 240px;
+	        display: table;
+		      .centered-inner {
+	          display: table-cell;
+	          vertical-align: middle;
+		      }
+		    }
+	    }
+	  }
+	}
+
+  .webform-client-form {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    fieldset {
+      &#webform-component-wrapper--wrapper-left {
+        float: left;
+        width: 40%;
+        margin-right: 10%;
+        .form-text {
+          width: 100%;
+          border: 1px solid #cacaca;
+          height: 30px;
+          line-height: 30px;
+          color: #7a7a7a;
+        }
+        .form-textarea {
+          width: 100%;
+          border: 1px solid #cacaca;          
+          color: #7a7a7a;          
+        }
+      }
+      &#webform-component-wrapper--wrapper-right {
+        float: left;
+        width: 30%;
+        iframe {
+          width: 350px !important;
+          border: 4px solid white;
+        }
+      }
+    }
+  }
+
+	#main {
+	  .block-main-referenties {
+	    #isotope-container {
+	      margin-left: 40px;
+	    }
+	    #isotope-options {
+	      ul {
+	        margin-left: 40px;
+	        li {
+            margin-bottom: 10px;
+	        }
+	      }
+	    }
+      .isotope-element {
+        width: 30%;
+        height: 300px;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+        .show-more {
+          left: 75px;
+          top: 90px;
+        }
+
+      }
+	  }
+	}
+
+  #main {
+    article.node-referentie {
+      .referentie-tags {
+        font-size: 1em;
+        margin-left: -10px;
+        span.tag {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  
+  /* Image on Missie & Aanpak page */
+  body.page-node-5 {
+    #main {
+      .field-name-field-page-block {
+        .field-name-field-page-block-body {
+			    p.schema-aanpak {
+			      img {
+			        margin-left: 0;
+			        float: none !important;
+			        width: 100% !important;
+			        max-width: 100% !important;
+			      }
+			    }
+        }
+      }
+    }
+  }
+
+  #footer {
+    .inner {
+      .contact {
+        @include zen-grid-item(8, 1);
+      }
+      .sm {
+        @include zen-grid-item(4, 9);
+        a {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

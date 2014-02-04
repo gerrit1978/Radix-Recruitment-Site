@@ -1,0 +1,404 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@media all and (max-width: 319px) {
+
+  #header {
+    padding: 0;
+  }
+
+  #navigation a#responsive-main-menu {
+      display: block;
+      background: url(../images/bg-responsive-menu.png) no-repeat center right;
+  }
+
+  #navigation .block-menu {
+    height: 40px;
+    line-height: 40px;
+    ul {
+      text-align: left;
+      li {
+        display: block;
+      }
+    }
+  }
+
+  // hide the highlighted stuff
+  .region-highlighted {
+    display: none;
+  }
+
+  #main {
+    .block-960 {
+	    margin-top: 20px;
+	    h1 {
+	      font-size: 2em;
+	      border: none;
+	      margin-bottom: 30px;
+	    }
+    }
+  }
+  
+  #main {
+    .block-wat-doen-we-hr {
+      ul {
+        li {
+          width: 100%;
+          float: none;
+          position: relative;
+        }
+      }
+    }
+  }
+  
+}
+
+@media all and (min-width: 320px) and (max-width: 479px) {
+
+  a.more-button {
+    display: block;
+    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px 0;
+  }
+
+
+  #header {
+    padding: 0;
+  }
+
+	#navigation {
+	  margin-bottom: 20px;
+	  width: 100%;
+	  background: $grey1;
+	  height: 40px;
+	  overflow: hidden;
+	  box-shadow: 0 2px 10px #444;
+	  -moz-box-shadow: 0 2px 10px #444;
+	  -webkit-box-shadow: 0 2px 10px #444;    
+    .region-navigation {
+      #block-system-main-menu {
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            line-height: 40px;
+            list-style: none;
+            a {
+              color: $darkColor1;
+              text-transform: uppercase;
+              &#responsive-main-menu {
+                display: block;
+                background: url(../images/bg-responsive-menu.png) no-repeat center right;              
+              }
+              &:hover {
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // hide the highlighted stuff
+  .region-highlighted {
+    display: none;
+  }
+
+  #main {
+    .block-960 {
+	    margin-top: 20px;
+	    h1 {
+	      font-size: 2em;
+	      border: none;
+	      margin-bottom: 30px;
+	    }
+    }
+  }
+
+  #main {
+    .block-tagline-front {
+      text-align: left; 
+      font-size: 1.125em;
+    }
+  }
+
+  #main {
+    .block-wat-doen-we {
+      ul.blocks {
+        li {
+          width: 100%;
+          height: 50px;
+          float: none;
+          position: relative;
+          a {
+	          .title {
+	            font-size: 1em;
+	          }
+          }
+        }
+      }
+    }
+  }
+  
+	#main {
+	  .block-wie-zijn-we {
+	    .view-header {
+	      p {
+	        font-size: 1.75em;
+	      }
+	    }
+	    ul {
+	      margin: 0;
+	      padding: 0;
+	      li {
+	        width: 100%;
+	        float: none;
+	        .photo {
+	          width: 100%;
+	          text-align: center;
+	        }
+	      }
+	    }
+	    .view-footer {
+	      a.more-button {
+	        display: block;
+	        padding: 10px 0;
+	        width: 100%;
+	      }
+	    }
+	    
+	  }
+	}
+	
+	#main {
+	  .block-ons-werk {
+			.view-footer {
+				a.more-button {
+					display: block;
+					padding: 10px 0;
+					width: 100%;
+				}
+			}
+	  }
+	}
+	
+  #main {
+    .header-block {
+      margin-top: 0;
+      height: auto;
+      .visual {
+        display: none;
+      }
+      .text {
+        .captions {
+          h1 {
+            margin: 0;
+            color: $lightColor4;
+          }
+          h2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+	
+	#main {
+	  .field-name-field-page-block {
+	    h1 {
+	      padding-top: 25px;
+	      font-size: 2em !important;
+	      line-height: 1em !important;
+	      border: none !important;
+	      text-align: left !important;
+	      margin-bottom: 15px !important;
+	      span {
+	        padding: 0 !important;
+	      }
+	    }
+	    .highlight {
+	      margin: 0;
+	      margin-top: 20px;
+	      padding: 10px;
+	      h1 {
+	        padding-top: 15px;
+	      }
+	    }
+	    .non-highlight {
+	      margin: 0;
+	      margin-top: 20px;
+	      padding: 0;
+	    }
+	    .field-name-field-page-block-body {
+	      font-size: 0.9375em;
+	      img {
+	        display: none !important;
+	      }
+		    .block-col6 {
+		      width: 100%;
+		      float: none;
+		      margin-right: 0;
+		      margin-bottom: 20px;
+		      padding: 0;
+		    }
+	      .block-col12 {
+	        width: 100%;
+	        float: none;
+	        margin-right: 0;
+	        padding: 0;
+	        margin-bottom: 0;
+	        ul {
+	          margin-top: 0 !important;
+	          margin-bottom: 0 !important;
+	          li {
+	          }
+	        }
+	      }
+	      .left {
+	        p {
+	          text-align: left;
+	          margin-bottom: 20px;
+	        }
+	      }
+	      .right {
+	        p {
+	          text-align: left;
+	          margin-bottom: 20px;
+	        }
+	      }
+	      p.more-info {
+	        display: none;
+	      }
+	      h2 {
+	        margin-bottom: 15px;
+	      }
+	      ul {
+	        margin-top: 10px;
+	        margin-bottom: 10px;
+	      }
+	      .anchor {
+	        padding-top: 40px;
+	      }
+	      h1 {
+	      }
+	      h2 {
+	        line-height: 1;
+	      }
+	    }
+	  }
+  }
+  
+  .block-call-to-action {
+    display: none;
+  }
+
+  .webform-client-form {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    fieldset {
+      &#webform-component-wrapper--wrapper-left {
+        width: 95% !important;
+        float: none;
+        .form-text {
+        }
+      }
+      &#webform-component-wrapper--wrapper-right {
+        display: none;
+      }
+    }
+    #edit-actions {
+      margin-top: 0 !important;
+      padding-bottom: 20px !important;
+    }
+  }
+
+	#main {
+	  .block-main-referenties {
+	    ul.referenties {
+	      li.referentie {
+          width: 100%;
+          border-bottom: 2px solid #cacaca;
+          padding-bottom: 10px;
+	      }
+	    }
+	  }
+	}
+	
+	#main {
+	  article.node-referentie {
+	    margin-top: 10px;
+      .referentie-top {
+        .item-list {
+          ul {
+            margin-top: 10px;
+            li {
+              float: right;
+            }
+          }
+        }      
+      }
+      .referentie-tags {
+        text-align: left;
+        margin-left: 0px;
+        span.tag {
+          display: block;
+          padding: 0;
+        }
+        span.separator {
+          display: none;
+        }
+      }
+	    .field-name-body {
+	      font-size: 1.25em;
+	      line-height: 1.4;
+	      text-align: left;
+	    }
+	  }
+	}
+
+  #main {
+	  .block-main-referenties {
+	    #isotope-options {
+	      ul {
+	        li {
+            margin-bottom: 10px;
+	        }
+	      }
+	    }
+	    #isotope-container {
+	      margin-left: 0;
+	      width: 100%;
+	    }
+      .isotope-element {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+	  }
+  }
+
+  #footer {
+    font-size: 0.75em;
+    .contact {
+      div {
+        padding-left: 35px;
+      }
+    }
+  }
+}

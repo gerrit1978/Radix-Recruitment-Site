@@ -1,0 +1,5 @@
+name        = Subnavigatie
+description = Subnav block voor Wat We Doen paginas
+core        = 7.x
+version     = 7.x-1.0
+package     = Radix

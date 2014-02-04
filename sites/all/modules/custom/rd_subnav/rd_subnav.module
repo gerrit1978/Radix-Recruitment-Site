@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * @file
+ * Adds subnavigatie block for Wat We Doen pagina's
+ *
+ */
+
+/**
+ * Implements hook_init
+ */
+function rd_subnav_init() {
+  $path = drupal_get_path('module', 'rd_subnav');
+  drupal_add_js($path . '/js/script.js');
+}
+
+/**
+ * Implements hook_block_info
+ */
+function rd_subnav_block_info() {
+  $blocks = array();
+  
+  $blocks['rd_subnav'] = array(
+    'info' => t('Subnavigatie Wat We Doen'),
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ */
+function rd_subnav_block_view($delta = '') {
+  $block = array();
+  
+  switch ($delta) {
+    case 'rd_subnav':
+      $block['subject'] = '';
+      $block['content'] = _rd_subnav_block_render();    
+  }
+  
+  return $block;
+}
+
+/** 
+ * Implements hook_preprocess_node
+ */
+function rd_subnav_preprocess_node(&$variables) {
+  $nids = array(4, 21);
+
+  if (in_array($variables['nid'], $nids)) {
+	  $block = block_load('rd_subnav', 'rd_subnav');
+	  $build = _block_get_renderable_array(_block_render_blocks(array($block)));  
+	  $variables['content']['subnav'] = $build;  
+  }
+}
+
+/**
+ * Rendering function for subnav block
+ */
+function _rd_subnav_block_render() {
+  $content = "";
+
+  // first, get current NID
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+  
+    $links = array();
+  
+    $nid = arg(1);
+    $node = node_load($nid);
+    
+    $blocks_field = field_get_items('node', $node, 'field_page_block');
+    
+    foreach ($blocks_field as $block_field) {
+      $field_collection = entity_metadata_wrapper('field_collection_item', $block_field['value']);
+      $title = $field_collection->field_page_block_title->value();
+      $anchor = $field_collection->field_page_block_anchor_id->value();
+      $link = "<a href='#" . $anchor . "'>" . $title . "</a>";
+      $links[] = $link;
+    }
+  }
+  
+  $content .= theme('item_list', array('items' => $links));
+  
+//  $content .= "Hier komt subnav voor deze pagina";
+  
+  return $content;
+}
