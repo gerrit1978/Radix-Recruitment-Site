@@ -14,21 +14,6 @@
   $zen-grid-width: 720px;
   $zen-gutter-width: 10px;
 
-	.tablet {
-	  display: block;
-	  margin-bottom: 20px;
-	  a {
-	    display: block;
-	    width: 100%;
-	    background: $mainColor;
-	    color: white;
-	    font-weight: 800;
-	    text-align: center;
-	    padding: 10px 0;
-	  }
-	}
-
-
   #call-to-action-wrapper {
     display: none;
   }
@@ -40,22 +25,20 @@
     .block-front-items {
       ul.front-items {
         .wrapper {
-          height: 180px !important;
-          background: none !important;
-          .caption {
-            width: 100% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            font-size: 2em !important;
-            text-align: center;
-            margin-top: 0 !important;
-            em {
-              font-weight: 100;
+            .caption {
+              width: 100% !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+              font-size: 2em !important;
+              text-align: center;
+              margin-top: 0 !important;
+              em {
+                font-weight: 100;
+              }
             }
-          }
-          .extra-visual {
-            display: none;
-          }
+            .extra-visual {
+              display: none;
+            }
         }
       }
     }
@@ -66,7 +49,7 @@
 	    ul {
 	      li {
 	        font-size: 0.875em;
-	        margin-right: 15px;
+	        margin-right: 8px;
 	        &.last {
 	          margin-right: 0;
 	        }
@@ -148,10 +131,8 @@
 	#main {
 	  .field-name-field-page-block {
 	    h1 {
-	      font-size: 2em;
+	      font-size: 3em;
 	      border: none !important;
-	      margin-bottom: 45px;
-	      margin-top: 30px;
 	    }
 	    .highlight {
 	      margin: 0;
@@ -166,26 +147,14 @@
 	    .field-name-field-page-block-body {
 	      font-size: 0.9375em;
 	      img {
-	        max-width: 50% !important;
-	        margin-left: 2%;
-	        float: right;
+	        max-width: 40% !important;
+	        margin-right: 5%;
+	        float: left;
 	        height: auto !important;
-	      }
-	      h4 {
-	        margin-bottom: 5px;
-	      }
-	      ul {
-	        margin: 10px 0 !important;
 	      }
 	      p {
 	        margin-bottom: 20px;
 	        text-align: left !important;
-	        &.more-info {
-	          display: none;
-	        }
-	      }
-	      ul {
-	        margin: 20px 0;
 	      }
 		    .block-col6 {
 		      width: 100%;
@@ -194,15 +163,6 @@
 		      margin-bottom: 20px;
 		      padding: 0;
 		      
-		    }
-		    .centered {
-		      font-size: 0.9375em;
-	        height: 240px;
-	        display: table;
-		      .centered-inner {
-	          display: table-cell;
-	          vertical-align: middle;
-		      }
 		    }
 	    }
 	  }
@@ -270,36 +230,6 @@
       }
 	  }
 	}
-
-  #main {
-    article.node-referentie {
-      .referentie-tags {
-        font-size: 1em;
-        margin-left: -10px;
-        span.tag {
-          padding: 0 10px;
-        }
-      }
-    }
-  }
-  
-  /* Image on Missie & Aanpak page */
-  body.page-node-5 {
-    #main {
-      .field-name-field-page-block {
-        .field-name-field-page-block-body {
-			    p.schema-aanpak {
-			      img {
-			        margin-left: 0;
-			        float: none !important;
-			        width: 100% !important;
-			        max-width: 100% !important;
-			      }
-			    }
-        }
-      }
-    }
-  }
 
   #footer {
     .inner {

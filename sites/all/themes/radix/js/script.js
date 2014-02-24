@@ -33,7 +33,7 @@ Drupal.behaviors.captionsSubAnim = {
 
 Drupal.behaviors.frontBlocks = {
   attach: function(context, settings) {
-    if ($(window).width() > 768) {  
+    if ($(window).width() > 500) {  
 	    var block = $('.block-wat-doen-we ul li');
 	    block.hover(function() {
 	      $(this).find('.title').fadeOut();
@@ -79,18 +79,20 @@ Drupal.behaviors.phoneMenu = {
 
 Drupal.behaviors.toTop = {
   attach: function(context, settings) {
-    $(window).scroll(function() {
-      var top = Math.abs($('html').offset().top);
-      if (top > 300) {
-        $('a#to-top').fadeIn();
-      } else {
-        $('a#to-top').fadeOut();
-      }
-    });
-    $('a#to-top').click(function() {
-      $('html, body').animate({scrollTop:0}, "slow");
-      return false;
-    });
+    if ($(window).width() > 500) {
+      $(window).scroll(function() {
+        var top = Math.abs($('html').offset().top);
+        if (top > 300) {
+          $('a#to-top').fadeIn();
+        } else {
+          $('a#to-top').fadeOut();
+        }
+      });
+      $('a#to-top').click(function() {
+        $('html, body').animate({scrollTop:0}, "slow");
+        return false;
+      });
+    } 
   }
 }
 
@@ -106,13 +108,11 @@ Drupal.behaviors.frontReferenties = {
 
 Drupal.behaviors.mainReferenties = {
   attach: function(context, settings) {
-    if ($(window).width() > 768) {
-	    $('.block-main-referenties .isotope-element').hover(function() {
-	      $(this).find('.show-more').fadeIn("slow");
-	    }, function() {
-	      $(this).find('.show-more').fadeOut("slow");    
-	    });
-	  }
+    $('.block-main-referenties .isotope-element').hover(function() {
+      $(this).find('.show-more').fadeIn("slow");
+    }, function() {
+      $(this).find('.show-more').fadeOut("slow");    
+    });
   }
 }
 
@@ -161,13 +161,7 @@ Drupal.behaviors.watDoenWeAnchors = {
     if (data.length > 0) {
 	    var selector = "#" + data;
       var top = $(selector).offset().top;
-      // solve problem on ipad
-      if ($(window).width() <= 768 && $(window).width() > 500) {
-        top = top - 85;
-      }
-      if ($(window).width() > 1000) {
-        top = top - 30;
-      }
+/*       var topCorrected = top - 80; */
       $('html, body').animate({scrollTop:top}, 0);
 	  }
   }

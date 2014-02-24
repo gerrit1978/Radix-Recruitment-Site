@@ -27,10 +27,6 @@
 
 /* General Elements */
 
-.tablet {
-  display: none;
-}
-
 body {
   font-family: "Ruda";
   color: $darkColor1;
@@ -179,8 +175,9 @@ a {
   .block-tagline-front {
     margin-top: 40px;
     margin-bottom: 20px;
-    font-size: 1.1875em;
+    font-size: 1.5em;
     line-height: 1.5;
+    text-align: justify;
     strong {
       color: $mainColor;
     }
@@ -438,27 +435,27 @@ a {
 	    .anchor {
 	      padding-top: 90px;
 	    }
+	    .left {
+	      p {
+          text-align: center;
+	      }
+	    }
+	    .right {
+	      p {
+	        text-align: center;
+	      }
+	    }
 	    p {
 	      margin: 0;
 	      &.margin {
 	        margin-bottom: 20px;
 	      }
 	      &.more-info {
-	        clear: both;
 	        margin: 20px 0;
-	        a {
-	          color: $mainColor;
-	          &:hover {
-	            color: $darkColor1;
-	          }
-	        }
 	      }
 	    }
 	    dt {
 	      margin-bottom: 5px;
-	      strong {
-	        color: $darkColor1;
-	      }
 	    }
 	    dd {
 	      margin-bottom: 15px;
@@ -982,6 +979,13 @@ a#to-top {
 	    text-indent: -999em;
 	    cursor: pointer;
 	  }
+  }
+}
+
+a.open-contact {
+  color: $mainColor;
+  &:hover {
+    color: $darkColor1;
   }
 }
 
